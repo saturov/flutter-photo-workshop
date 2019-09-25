@@ -73,7 +73,6 @@ class _CreateTripPageState extends State<CreateTripPage> {
     // Display the loading indicator.
     setState(() => _isLoading = true);
 
-    // TODO(codelab): Implement call to PhotosLibraryApiModel scope here.
     await ScopedModel.of<PhotosLibraryApiModel>(context)
         .createAlbum(tripNameFormController.text)
         .then((Album album) {
@@ -82,9 +81,5 @@ class _CreateTripPageState extends State<CreateTripPage> {
       setState(() => _isLoading = false);
       Navigator.pop(context);
     });
-
-    // Hide the loading indicator.
-    setState(() => _isLoading = false);
-    Navigator.pop(context);
   }
 }
