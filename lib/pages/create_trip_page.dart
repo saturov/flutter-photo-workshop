@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 import 'package:sharing_codelab/components/primary_raised_button.dart';
+import 'package:sharing_codelab/model/photos_library_api_model.dart';
+import 'package:sharing_codelab/photos_library_api/album.dart';
 
 import '../util/to_be_implemented.dart';
 
@@ -71,7 +74,14 @@ class _CreateTripPageState extends State<CreateTripPage> {
     setState(() => _isLoading = true);
 
     // TODO(codelab): Implement call to PhotosLibraryApiModel scope here.
-    ToBeImplemented.showMessage();
+    await ScopedModel.of<PhotosLibraryApiModel>(context)
+        .createAlbum(tripNameFormController.text)
+        .then((Album album) {
+
+      // Hide the loading indicator.
+      setState(() => _isLoading = false);
+      Navigator.pop(context);
+    });
 
     // Hide the loading indicator.
     setState(() => _isLoading = false);
