@@ -104,13 +104,23 @@ class _TripPageState extends State<TripPage> {
   }
 
   void _showShareToken(BuildContext context) {
-    // TODO(codelab): Implement this method.
-    ToBeImplemented.showMessage();
+    if (album.shareInfo == null) {
+      print("Not shared, sharing album first.");
+      // Album is not shared yet, share it first, then display dialog
+      _shareAlbum(context).then((_) {
+        _showTokenDialog(context);
+      });
+    } else {
+      // Album is already shared, display dialog with token
+      _showTokenDialog(context);
+    }
   }
 
   void _showTokenDialog(BuildContext context) {
-    // TODO(codelab): Implement this method.
-    ToBeImplemented.showMessage();
+    print('This is the shareToken:\n${album.shareInfo.shareToken}');
+
+    _showShareDialog(
+        context, 'Use this token to share', album.shareInfo.shareToken);
   }
 
   void _showUrlDialog(BuildContext context) {

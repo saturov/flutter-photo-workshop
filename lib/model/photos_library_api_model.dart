@@ -150,13 +150,11 @@ class PhotosLibraryApiModel extends Model {
        _albums.addAll(ownedAlbums);
      }
 
-    /*
     // Load albums from owned and shared albums
     final List<List<Album>> list =
     await Future.wait([_loadSharedAlbums(), _loadAlbums()]);
 
     _albums.addAll(list.expand((a) => a ?? []));
-    */
 
     notifyListeners();
     hasAlbums = true;
