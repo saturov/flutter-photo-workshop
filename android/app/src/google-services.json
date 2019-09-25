@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "589708070105",
+    "firebase_url": "https://kgd-workshop.firebaseio.com",
+    "project_id": "kgd-workshop",
+    "storage_bucket": "kgd-workshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589708070105:android:a65fca019a0db5682f42c8",
+        "android_client_info": {
+          "package_name": "com.google.codelab.photos.sharing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589708070105-n4hmneotpa8l3h22ldom3vhv1ne947as.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.codelab.photos.sharing",
+            "certificate_hash": "1afc0a37986609dc44539092fd6f5156a454b55b"
+          }
+        },
+        {
+          "client_id": "589708070105-qnln3p5bq9djqpus77goluiocvpolsu4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL57TCSAJeLpGAszgf9uLWTGxaeBQiNaA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589708070105-qnln3p5bq9djqpus77goluiocvpolsu4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
