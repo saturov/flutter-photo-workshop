@@ -25,43 +25,7 @@ class _CreateTripPageState extends State<CreateTripPage> {
       appBar: AppBar(),
       body: Container(
         padding: const EdgeInsets.all(25),
-        child: _isLoading
-            ? Center(child: const CircularProgressIndicator())
-            : Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    TextFormField(
-                      controller: tripNameFormController,
-                      autocorrect: true,
-                      decoration: InputDecoration(
-                        hintText: 'Trip name',
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 15,
-                        horizontal: 0,
-                      ),
-                      child: const Text(
-                        'This will create a shared album in your Google Photos'
-                            ' account',
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Center(
-                      child: PrimaryRaisedButton(
-                        onPressed: () => _createTrip(context),
-                        label: const Text('Create Trip'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+        child: Text('Тут что-то будет...')
       ),
     );
   }
